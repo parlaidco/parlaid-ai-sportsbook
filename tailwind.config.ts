@@ -22,6 +22,9 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          variant: "hsl(var(--primary-variant))",
+          alt: "hsl(var(--primary-alt))",
+          accent: "hsl(var(--primary-accent))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +49,7 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          gradient: "hsl(var(--card-gradient))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -57,6 +61,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        heading: "var(--font-heading)",
+        stats: "var(--font-stats)",
+        body: "var(--font-body)",
+      },
+      boxShadow: {
+        card: "var(--shadow-card)",
+        hover: "var(--shadow-hover)",
+        glow: "var(--glow-red)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +94,37 @@ export default {
             height: "0",
           },
         },
+        "fill-bar": {
+          "0%": { width: "0%" },
+          "100%": { width: "var(--fill-width)" },
+        },
+        "pulse-red": {
+          "0%": { boxShadow: "0 0 0 0 rgba(249, 35, 32, 0.7)" },
+          "70%": { boxShadow: "0 0 0 10px rgba(249, 35, 32, 0)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(249, 35, 32, 0)" },
+        },
+        "card-hover": {
+          "0%": { transform: "translateY(0) scale(1)" },
+          "100%": { transform: "translateY(-4px) scale(1.02)" },
+        },
+        "fade-slide-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fill-bar": "fill-bar 1s ease-out",
+        "pulse-red": "pulse-red 2s infinite",
+        "card-hover": "card-hover 0.3s ease-out",
+        "fade-slide-up": "fade-slide-up 0.5s ease-out",
       },
     },
   },
