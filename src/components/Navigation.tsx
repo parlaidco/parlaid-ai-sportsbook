@@ -5,6 +5,7 @@ const Navigation = () => {
   const location = useLocation();
   
   const navItems = [
+    { label: "Home", href: "/home" },
     { label: "Dashboard", href: "/" },
     { label: "Simulator", href: "/simulator" },
     { label: "Explain Mode", href: "/explain" },
